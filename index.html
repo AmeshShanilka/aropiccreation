@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AroPic - Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link href="img/favicon.png" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Modern Hero Animations */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 60px, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translate3d(-60px, 0, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translate3d(60px, 0, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+            50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+        }
+        
+        @keyframes textGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes letterSpacing {
+            from { letter-spacing: 3px; opacity: 0; }
+            to { letter-spacing: normal; opacity: 1; }
+        }
+        
+        /* New Animations */
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 1; }
+            80%, 100% { transform: scale(2); opacity: 0; }
+        }
+        
+        @keyframes zigzag {
+            0%, 100% { transform: translateX(0) translateY(0); }
+            25% { transform: translateX(15px) translateY(-15px); }
+            50% { transform: translateX(0) translateY(-30px); }
+            75% { transform: translateX(-15px) translateY(-15px); }
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+        
+        @keyframes wave {
+            0% { transform: translateX(0) rotate(0deg); }
+            50% { transform: translateX(-20px) rotate(10deg); }
+            100% { transform: translateX(0) rotate(0deg); }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-30px);}
+            60% {transform: translateY(-15px);}
+        }
+        
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px rgba(255,255,255,0.7); }
+            50% { box-shadow: 0 0 20px rgba(255,255,255,0.9); }
+            100% { box-shadow: 0 0 5px rgba(255,255,255,0.7); }
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes morph {
+            0% { border-radius: 50%; }
+            50% { border-radius: 20% 60% 70% 30%/60% 30% 70% 40%; }
+            100% { border-radius: 50%; }
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
+        }
+        
+        @keyframes orbit {
+            0% { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+        }
+        
+        @keyframes orbitReverse {
+            0% { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+            100% { transform: rotate(-360deg) translateX(60px) rotate(360deg); }
+        }
+        
+        @keyframes dash {
+            0% { stroke-dashoffset: 1000; }
+            100% { stroke-dashoffset: 0; }
+        }
+        
+        @keyframes blob {
+            0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+        }
+        
+        
+        
+        .hero-title {
+            font-size: calc(1.250rem + 1.5vw);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, #ffffff, #f8f9fa, #ffffff);
+            background-size: 200% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textGradient 3s linear infinite, letterSpacing 1s ease-out forwards;
+            opacity: 0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.8s forwards;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* FIXED BUTTON STYLES */
+        .hero-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #ffffff, #f8f9fa);
+            color: #212529;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 1;
+            animation: fadeInUp 1s ease-out 1.2s forwards, pulse 2s infinite 2.5s;
+        }
+        
+        .hero-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: all 0.6s;
+            z-index: -1;
+        }
+        
+        .hero-btn:hover::before {
+            left: 100%;
+        }
+        
+        .hero-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            color: #212529;
+        }
+        
+        .hero-img {
+            opacity: 0;
+            animation: fadeInUp 1.5s ease-out 0.5s forwards, float 6s ease-in-out infinite 2s;
+            filter: drop-shadow(0 20px 15px rgba(0, 0, 0, 0.2));
+            transform: perspective(800px) rotateY(0deg);
+            transition: all 0.5s;
+            max-width: 800px;
+            height: auto;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .hero-img:hover {
+            transform: perspective(800px) rotateY(0deg) scale(1.05);
+        }
+        
+        /* Floating elements - Enhanced */
+        
+        
+        /* New Animated Objects */
+        .animated-geometric {
+            position: absolute;
+            z-index: 2;
+            opacity: 0.7;
+        }
+        
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 43px solid rgba(255, 255, 255, 0.15);
+            top: 15%;
+            right: 15%;
+            animation: rotate 20s linear infinite, pulse 4s ease-in-out infinite;
+        }
+        
+        .square {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            bottom: 20%;
+            left: 10%;
+            animation: zigzag 12s ease-in-out infinite;
+        }
+        
+        .circle-pulse {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            top: 40%;
+            left: 85%;
+            animation: pulse-ring 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+        }
+        
+        .circle-pulse::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            animation: pulse-ring 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            animation-delay: 0.5s;
+        }
+        
+        .zigzag-line {
+            position: absolute;
+            width: 80px;
+            height: 20px;
+            background: linear-gradient(
+                -45deg, 
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 255, 255, 0) 40%, 
+                rgba(255, 255, 255, 0.2) 50%, 
+                rgba(255, 255, 255, 0) 60%, 
+                rgba(255, 255, 255, 0) 100%
+            );
+            background-size: 200% 100%;
+            top: 65%;
+            right: 5%;
+            transform: rotate(45deg);
+            animation: wave 8s ease-in-out infinite, twinkle 3s ease-in-out infinite;
+        }
+        
+        .particles-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+        }
+        
+        /* Create multiple particles with different animations */
+        .particle:nth-child(1) {
+            width: 5px;
+            height: 5px;
+            top: 25%;
+            left: 20%;
+            animation: float 8s ease-in-out infinite, twinkle 4s ease-in-out infinite;
+        }
+        
+        .particle:nth-child(2) {
+            width: 3px;
+            height: 3px;
+            top: 40%;
+            left: 70%;
+            animation: float 10s ease-in-out infinite reverse, twinkle 3s ease-in-out infinite;
+        }
+        
+        .particle:nth-child(3) {
+            width: 4px;
+            height: 4px;
+            top: 60%;
+            left: 40%;
+            animation: float 7s ease-in-out infinite, twinkle 5s ease-in-out infinite;
+        }
+        
+        .particle:nth-child(4) {
+            width: 6px;
+            height: 6px;
+            top: 30%;
+            left: 60%;
+            animation: float 9s ease-in-out infinite reverse, twinkle 2s ease-in-out infinite;
+        }
+        
+        .particle:nth-child(5) {
+            width: 4px;
+            height: 4px;
+            top: 70%;
+            left: 30%;
+            animation: float 11s ease-in-out infinite, twinkle 4s ease-in-out infinite;
+        }
+        
+        .particle:nth-child(6) {
+            width: 5px;
+            height: 5px;
+            top: 50%;
+            left: 80%;
+            animation: float 6s ease-in-out infinite reverse, twinkle 3s ease-in-out infinite;
+        }
+        
+        /* Additional animated elements */
+        .bouncing-element {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            bottom: 15%;
+            right: 25%;
+            animation: bounce 4s infinite, glow 3s infinite;
+            z-index: 2;
+        }
+        
+        .spinning-element {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            border-top: 3px solid rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            top: 25%;
+            left: 25%;
+            animation: spin 8s linear infinite;
+            z-index: 2;
+        }
+        
+        .morphing-element {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.15);
+            top: 75%;
+            right: 30%;
+            animation: morph 10s ease-in-out infinite, float 9s ease-in-out infinite;
+            z-index: 2;
+        }
+        
+        .connecting-dots {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+        
+        .dot {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            animation: twinkle 4s infinite alternate;
+        }
+        
+        .dot:nth-child(1) { top: 20%; left: 5%; animation-delay: 0s; }
+        .dot:nth-child(2) { top: 30%; left: 90%; animation-delay: 1s; }
+        .dot:nth-child(3) { top: 80%; left: 10%; animation-delay: 2s; }
+        .dot:nth-child(4) { top: 60%; left: 95%; animation-delay: 3s; }
+        .dot:nth-child(5) { top: 10%; left: 50%; animation-delay: 4s; }
+        .dot:nth-child(6) { top: 90%; left: 60%; animation-delay: 5s; }
+        
+        /* New Advanced Animations */
+        .orbiting-system {
+            position: absolute;
+            top: 50%;
+            left: 70%;
+            width: 160px;
+            height: 160px;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+        
+        .orbit-path {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .orbit-path-1 {
+            width: 120px;
+            height: 120px;
+            animation: rotate 20s linear infinite;
+        }
+        
+        .orbit-path-2 {
+            width: 80px;
+            height: 80px;
+            animation: rotate 15s linear infinite reverse;
+        }
+        
+        .orbiter {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.8);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .orbiter-1 {
+            animation: orbit 8s linear infinite;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+        }
+        
+        .orbiter-2 {
+            animation: orbitReverse 6s linear infinite;
+            background: linear-gradient(45deg, #45aaf2, #a55eea);
+        }
+        
+        
+        
+        .svg-circle {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            right: 10%;
+            stroke: rgba(255, 255, 255, 0.2);
+            stroke-width: 2;
+            fill: none;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 15s linear infinite alternate;
+        }
+        
+        .blob-element {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(45deg, rgba(124, 58, 237, 0.3), rgba(92, 51, 180, 0.3));
+            top: 65%;
+            left: 15%;
+            animation: blob 12s ease-in-out infinite, float 10s ease-in-out infinite;
+            filter: blur(15px);
+            z-index: 1;
+        }
+        
+        .shimmer-text {
+            position: relative;
+            display: inline-block;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            background-size: 200% 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: shimmer 3s infinite;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-img {
+                transform: perspective(800px) rotateY(0deg);
+                margin-top: 3rem;
+                max-width: 100%;
+            }
+            
+            .text-lg-start {
+                text-align: center !important;
+            }
+            
+            /* Hide some elements on mobile for better performance */
+            .triangle, .square, .zigzag-line, .morphing-element, .orbiting-system, .svg-circle {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .hero-btn {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+            
+            /* Reduce number of particles on mobile */
+            .particle:nth-child(n+4) {
+                display: none;
+            }
+            
+            .bouncing-element, .spinning-element, .blob-element {
+                display: none;
+            }
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <video autoplay loop muted playsinline>
+                <source src="img/loader.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <h1 class="m-0"></i>AROPIC</h1>
+                    </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <a href="project.html" class="nav-item nav-link">Projects</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="software_and_apps.html" class="dropdown-item">Software and Apps</a>
+                                <a href="online_tools.html" class="dropdown-item">Online Tools</a>
+                                <a href="prebuilt-websites.html" class="dropdown-item">Prebuilt Websites</a>
+                                
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    
+                    <a href="https://wa.me/message/77ER3ZFRTISXF1" class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3">Let's Chat</a>
+                </div>
+            </nav>
+
+            <div class="container-xxl py-5 bg-primary hero-header mb-5">
+                
+                
+                <!-- New Animated Geometric Shapes -->
+                <div class="animated-geometric triangle"></div>
+                <div class="animated-geometric square"></div>
+                <div class="animated-geometric circle-pulse"></div>
+                <div class="animated-geometric zigzag-line"></div>
+                
+                <!-- Additional animated elements -->
+                <div class="bouncing-element"></div>
+                <div class="spinning-element"></div>
+                <div class="morphing-element"></div>
+                
+                <!-- Particle Effects -->
+                
+                
+                <!-- Connecting dots -->
+                
+                
+                <!-- New Advanced Animations -->
+                <div class="orbiting-system">
+                    <div class="orbit-path orbit-path-1"></div>
+                    <div class="orbit-path orbit-path-2"></div>
+                    <div class="orbiter orbiter-1"></div>
+                    <div class="orbiter orbiter-2"></div>
+                </div>
+                
+                <div class="svg-shapes">
+                    <svg class="svg-circle" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" />
+                    </svg>
+                </div>
+                
+                <div class="blob-element"></div>
+                
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-12 text-center mb-5">
+                            <img class="img-fluid hero-img" src="img/hero.png" alt="">
+                        </div>
+                        <div class="col-lg-8 text-center text-lg-start">
+                            <h1 class="text-white mb-4 hero-title">Beyond Design, <br> Beyond Development.<br> Your Digital Partner</h1>
+                            <p class="text-white pb-3 hero-subtitle">A digital partner that goes beyond traditional design and development to help you achieve your goals. <span class="shimmer-text">Let's create something amazing together.</span></p>
+                            <!-- FIXED BUTTON -->
+                            <a href="service.html" class="hero-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="container-xxl py-5">
+            <div class="container px-lg-5">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="section-title position-relative mb-4 pb-2">
+                            <h6 class="position-relative text-primary ps-4">About Us</h6>
+                            <h2 class="mt-2">Your Friendly-Trusted Digital Partner with 5 Years of Expertise.</h2>
+                        </div>
+                        <p class="mb-4">
+                            Our mission is to help your business stand out everywhere, both in the digital and real world Whether you need an eye-catching Logo, Brand Identity Design, a user-friendly Website, a powerful Mobile App, other Marketing Materials, we combine creativity with technical expertise to deliver outstanding results.</p>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Exceptional Quality</h6>
+                                <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Accurate Outcomes</h6>
+                            </div>
+                            <div class="col-sm-6">
+                                <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>24/7 Support</h6>
+                                <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Fair Prices</h6>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mt-4">
+                            <a class="btn btn-primary rounded-pill px-4 me-3" href="about.html">Read More</a>
+                            <a class="btn btn-outline-primary btn-square me-3" href="https://m.facebook.com/people/AroPic-Creation/100094487085752/"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-primary btn-square me-3" href="https://twitter.com/search?q=%23TheamEXO&src=hashtag_click&f=user"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                              </svg></a>
+                            <a class="btn btn-outline-primary btn-square me-3" href="https://www.instagram.com/amesh_shanilka/"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="https://img.freepik.com/premium-vector/website-creator-concept-illustration_114360-3802.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-xxl bg-primary newsletter my-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container px-lg-5">
+                <div class="row align-items-center" style="height: 250px;">
+                    <div class="col-12 col-md-6">
+                        <h3 class="text-white">Ready to get started</h3>
+                        <small class="text-white">Let's create something amazing together.</small>
+                        <div class="position-relative w-100 mt-3">
+                            <box class="form-control border-0 rounded-pill w-100 ps-2 pe-10"  style="height: 48px;">
+                                <h1 class="form-control border-0 rounded-pill w-100 ps-50 pe-5">WE ARE ONE MASSAGE AWAY. LETS CREATE AMAZEMENT</h1>
+                            <a href="https://wa.me/message/77ER3ZFRTISXF1"><button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fab fa-whatsapp text-primary fs-4"></i></button></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center mb-n5 d-none d-md-block">
+                        <img class="img-fluid mt-5" style="height: 250px;" src="img/newsletter.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-xxl py-5">
+            <div class="container px-lg-5">
+                <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="position-relative d-inline text-primary ps-4">Our Services</h6>
+                    <h2 class="mt-2">What Solutions We Provide</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
+                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <font size="10px"><i class="bi bi-image"></i></font>
+                            </div>
+                            <h5 class="mb-3">Brand Identity Design</h5>
+                            <p>Logos, Brand Guidelines, Typography, Color Palettes.<br>
+                                Why it fits: Every business needs a strong brand identity.</p>
+                            <a class="btn btn-light px-3" href="service.html">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <font size="30px"><i class="bi-tv"></i></font>
+                            </div>
+                            <h5 class="mb-3">Web Design/UI/UX Design</h5>
+                            <p>Website and app interface design and Development, user flow, wireframing, prototyping.<br>
+                                Why it fits: Crucial for digital presence and user engagement.</p>
+                            <a class="btn btn-light px-3" href="service.html">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <font size="10px"><i class="bi-phone"></i></font>
+                            </div>
+                            <h5 class="mb-3">Social Media Marketing</h5>
+                            <p>Creating engaging content, managing campaigns, and growing your brand's presence across platforms like Facebook, Instagram, LinkedIn, and TikTok to connect with your audience.</p>
+                            <a class="btn btn-light px-3" href="service.html">Read More</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container-xxl py-5">
+            <div class="container px-lg-5">
+                <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="position-relative d-inline text-primary ps-4">Our Projects</h6>
+                    <h2 class="mt-2">Recently Completed Projects</h2>
+                </div>
+                <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-12 text-center">
+                        <ul class="list-inline mb-5" id="portfolio-flters">
+                            <li class="btn px-3 pe-4 active" data-filter="*">All</li>
+                            <li class="btn px-3 pe-4" data-filter=".first">Branding</li>
+                            <li class="btn px-3 pe-4" data-filter=".second">Web Design</li>
+                            <li class="btn px-3 pe-4" data-filter=".therd">Marketing Materials</li>
+                            <li class="btn px-3 pe-4" data-filter=".forth">Other Dev Projects</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row g-4 portfolio-container">
+                    <div class="col-lg-4 col-md-6 portfolio-item first wow zoomIn" data-wow-delay="0.1s">
+                        <div class="position-relative rounded overflow-hidden">
+                            <img class="img-fluid w-100" src="img/portfolio/branding/beanbliss.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-light" href="img/portfolio/branding/beanbliss.jpg" data-lightbox="portfolio"><i class="fa fa-plus text-primary"></i></a>
+                                <div class="mt-auto">
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Branding/Logo</small>
+                                    <a class="h5 d-block text-white mt-1 mb-0" href="">BeanBliss</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item therd wow zoomIn" data-wow-delay="0.3s">
+                        <div class="position-relative rounded overflow-hidden">
+                            <img class="img-fluid w-100" src="img/portfolio/post/social media 5.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-light" href="img/portfolio/post/social media 5.jpg" data-lightbox="portfolio"><i class="fa fa-plus text-primary"></i></a>
+                                <div class="mt-auto">
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Marketing Materials</small>
+                                    <a class="h5 d-block text-white mt-1 mb-0" href="">Social Media Post</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item therd wow zoomIn" data-wow-delay="0.6s">
+                        <div class="position-relative rounded overflow-hidden">
+                            <img class="img-fluid w-100" src="img/portfolio/post/social media 6.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-light" href="img/portfolio/post/social media 6.jpg" data-lightbox="portfolio"><i class="fa fa-plus text-primary"></i></a>
+                                <div class="mt-auto">
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Marketing Materials</small>
+                                    <a class="h5 d-block text-white mt-1 mb-0" href="">Social Media Post</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item first wow zoomIn" data-wow-delay="0.1s">
+                        <div class="position-relative rounded overflow-hidden">
+                            <img class="img-fluid w-100" src="img/portfolio/t-shert/KingLux T-Shirt.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-light" href="img/portfolio/t-shert/KingLux T-Shirt.jpg" data-lightbox="portfolio"><i class="fa fa-plus text-primary"></i></a>
+                                <div class="mt-auto">
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i>T-shirt Design</small>
+                                    <a class="h5 d-block text-white mt-1 mb-0" href="">KingLux</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item therd wow zoomIn" data-wow-delay="0.3s">
+                        <div class="position-relative rounded overflow-hidden">
+                            <img class="img-fluid w-100" src="img/portfolio/Books/mockup-012.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-light" href="img/portfolio/Books/mockup-012.jpg" data-lightbox="portfolio"><i class="fa fa-plus text-primary"></i></a>
+                                <div class="mt-auto">
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Marketing Materials</small>
+                                    <a class="h5 d-block text-white mt-1 mb-0" href="">Mal Pethi - Book Cover</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow zoomIn" data-wow-delay="0.6s">
+                        <div class="position-relative rounded overflow-hidden">
+                            <img class="img-fluid w-100" src="img/portfolio/web/Technology web page desing.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-light" href="img/portfolio/web/Technology web page desing.jpg" data-lightbox="portfolio"><i class="fa fa-plus text-primary"></i></a>
+                                <div class="mt-auto">
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Web Design</small>
+                                    <a class="h5 d-block text-white mt-1 mb-0" href="">Techno LK</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item forth wow zoomIn" data-wow-delay="0.6s">
+                        <div class="position-relative rounded overflow-hidden">
+                            <img class="img-fluid w-100" src="img/portfolio/dev/aroverter.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-light" href="img/portfolio/dev/aroverter.jpg" data-lightbox="portfolio"><i class="fa fa-plus text-primary"></i></a>
+                                <div class="mt-auto">
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Real-Time Sinhala Unicode Converter</small>
+                                    <a class="h5 d-block text-white mt-1 mb-0" href="">AroVerter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <br>
+                <br>
+                <center><a class="btn btn-primary rounded-pill py-3 px-4 me-3" href="project.html">See All Projects</a></center>
+            </div>
+        </div>
+        <div class="container-xxl bg-primary testimonial py-5 my-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="owl-carousel testimonial-carousel">
+                            <div class="testimonial-item bg-transparent border rounded text-white p-4">
+                                <i class="fa fa-quote-left fa-2x mb-3"></i>
+                                <p>AroPic Creation nailed our brand design. they transformed our brand with a desing that perfectly captures who we are. We've already noticed a boost in recognition and great results. Highly recommend!</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-pic.jpg" style="width: 50px; height: 50px;">
+                                    <div class="ps-3">
+                                        <h6 class="text-white mb-1">Minuka Bandara</h6>
+                                        <small>Founder-Owner, Sri Burger</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-item bg-transparent border rounded text-white p-4">
+                                <i class="fa fa-quote-left fa-2x mb-3"></i>
+                                <p>AroPic Creation did an amazing job designing our brand identity! Their creativity truly brought Herishi Fashion to life. We've already seen a positive impact on our visibility. Highly recommend!</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-pic.jpg" style="width: 50px; height: 50px;">
+                                    <div class="ps-3">
+                                        <h6 class="text-white mb-1">Anjana Weerawan</h6>
+                                        <small>Founder-Owner, Herishi Fashion</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s" style="min-height: 400px;">
+                        <div class="position-relative h-100">
+                            <img class="position-absolute img-fluid w-100 h-100" src="img/testimonial.jpg" style="object-fit: cover;" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>Avissawella, Colombo, SL</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+947 576 69690</p>
+                        <p><i class="fa fa-envelope me-3"></i>aropic@contact.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href="https://twitter.com/search?q=%23TheamEXO&src=hashtag_click&f=user"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                              </svg></a>
+                            <a class="btn btn-outline-light btn-social" href="https://m.facebook.com/people/AroPic-Creation/100094487085752/"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://youtube.com/@amesh8325?si=e_FdgPpnTvmIwEPE"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/amesh_shanilka/reels/"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Popular Link</h5>
+                        <a class="btn btn-link" href="about.html">About Us</a>
+                        <a class="btn btn-link" href="contact.html">Contact Us</a>
+                        <a class="btn btn-link" href="privacy-policy.html">Privacy Policy</a>
+                        <a class="btn btn-link" href="terms-&-condition.html">Terms & Condition</a>
+                        
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Project Gallery</h5>
+                        <div class="row g-2">
+                            <div class="col-4">
+                                <a href="project.html"><img class="img-fluid" src="img/portfolio/post/social media 10.jpg" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="project.html"><img class="img-fluid" src="img/portfolio/post/social media 14.jpg" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="project.html"><img class="img-fluid" src="img/portfolio/post/social media 6.jpg" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="project.html"><img class="img-fluid" src="img/portfolio/post/social media 2.jpg" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="project.html"><img class="img-fluid" src="img/portfolio/post/social media 4.jpg" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="project.html"><img class="img-fluid" src="img/portfolio/post/social media 5.jpg" alt="Image"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Our Products</h5>
+                        <p> </p>
+                        <div class="row g-2">
+                            <div class="col-4">
+                                <a href="software_and_apps.html"><img class="img-fluid" src="img/software_images/imago_icon.png" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="software_and_apps.html"><img class="img-fluid" src="img/software_images/guardoo.ico" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="software_and_apps.html"><img class="img-fluid" src="img/software_images/ihide.ico" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="software_and_apps.html"><img class="img-fluid" src="img/software_images/pidgo.ico" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="software_and_apps.html"><img class="img-fluid" src="img/software_images/pdgear.ico" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="online_tools.html"><img class="img-fluid" src="img/online-tools/mp3-cover-icon.jpg" alt="Image"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="index.html">AroPic Creation</a>, All Right Reserved. 
+							
+							Designed and Develop By <a class="border-bottom" href="https://avex.com/">AveX</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="index.html">Home</a>
+                                <a href="service.html">Service</a>
+                                <a href="contact.html">Help</a>
+                                <a href="faq.html">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <script>
+        // Additional JavaScript for interactive animations
+            document.addEventListener('DOMContentLoaded', function() {
+                // Add scroll-triggered animation class to elements
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.1
+                };
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animated');
+                        }
+                    });
+                }, observerOptions);
+                
+                // Observe elements that need animation
+                document.querySelectorAll('.hero-title, .hero-subtitle, .hero-btn, .hero-img').forEach(el => {
+                    observer.observe(el);
+                });
+                
+                // Initialize Wow.js if you're using it
+                if (typeof WOW !== 'undefined') {
+                    new WOW().init();
+                }
+                
+                // Create connecting lines between dots
+                function connectDots() {
+                    const canvas = document.createElement('canvas');
+                    const container = document.querySelector('.connecting-dots');
+                    const dots = document.querySelectorAll('.dot');
+                    
+                    if (!container || dots.length === 0) return;
+                    
+                    container.appendChild(canvas);
+                    canvas.style.position = 'absolute';
+                    canvas.style.top = '0';
+                    canvas.style.left = '0';
+                    canvas.style.width = '100%';
+                    canvas.style.height = '100%';
+                    canvas.style.zIndex = '0';
+                    
+                    canvas.width = container.offsetWidth;
+                    canvas.height = container.offsetHeight;
+                    
+                    const ctx = canvas.getContext('2d');
+                    
+                    function drawConnections() {
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+                        
+                        // Draw connections between dots that are close to each other
+                        for (let i = 0; i < dots.length; i++) {
+                            for (let j = i + 1; j < dots.length; j++) {
+                                const dot1 = dots[i];
+                                const dot2 = dots[j];
+                                
+                                const rect1 = dot1.getBoundingClientRect();
+                                const rect2 = dot2.getBoundingClientRect();
+                                
+                                const x1 = rect1.left + rect1.width/2 - container.getBoundingClientRect().left;
+                                const y1 = rect1.top + rect1.height/2 - container.getBoundingClientRect().top;
+                                const x2 = rect2.left + rect2.width/2 - container.getBoundingClientRect().left;
+                                const y2 = rect2.top + rect2.height/2 - container.getBoundingClientRect().top;
+                                
+                                const distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+                                
+                                if (distance < 200) { // Only connect dots that are close
+                                    ctx.beginPath();
+                                    ctx.moveTo(x1, y1);
+                                    ctx.lineTo(x2, y2);
+                                    ctx.strokeStyle = `rgba(255, 255, 255, ${0.2 - distance/1000})`;
+                                    ctx.lineWidth = 1;
+                                    ctx.stroke();
+                                }
+                            }
+                        }
+                    }
+                    
+                    // Initial draw
+                    drawConnections();
+                    
+                    // Update on resize and scroll
+                    window.addEventListener('resize', drawConnections);
+                    window.addEventListener('scroll', drawConnections);
+                }
+                
+                // Call the function to connect dots
+                connectDots();
+                
+                // Interactive mouse effects
+                document.addEventListener('mousemove', function(e) {
+                    const x = e.clientX / window.innerWidth;
+                    const y = e.clientY / window.innerHeight;
+                    
+                    // Move elements slightly based on mouse position
+                    const floatingElements = document.querySelectorAll('.floating-element, .animated-geometric');
+                    floatingElements.forEach((el, index) => {
+                        const speed = 0.01 + (index * 0.01);
+                        el.style.transform = `translate(${x * speed * 20}px, ${y * speed * 20}px) ${el.style.transform.split(' ').slice(2).join(' ')}`;
+                    });
+                    
+                    // Move particles based on mouse position
+                    const particles = document.querySelectorAll('.particle');
+                    particles.forEach((particle, index) => {
+                        const speed = 0.02 + (index * 0.005);
+                        particle.style.transform = `translate(${x * speed * 10}px, ${y * speed * 10}px)`;
+                    });
+                });
+                
+                // Add ripple effect to buttons
+                const buttons = document.querySelectorAll('.hero-btn');
+                buttons.forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        const x = e.offsetX;
+                        const y = e.offsetY;
+                        
+                        const ripple = document.createElement('span');
+                        ripple.classList.add('ripple-effect');
+                        ripple.style.left = `${x}px`;
+                        ripple.style.top = `${y}px`;
+                        
+                        this.appendChild(ripple);
+                        
+                        setTimeout(() => {
+                            ripple.remove();
+                        }, 600);
+                    });
+                });
+            });
+            // spinner function to handle the preloader with a timeout
+    var spinner = function () {
+        setTimeout(function () {
+            const spinnerEl = document.getElementById('spinner');
+            if (spinnerEl) {
+                // Keep the spinner for at least 3 seconds
+                setTimeout(() => {
+                    spinnerEl.classList.remove('show');
+                    // Optional: Hide the element completely after the animation
+                    setTimeout(() => spinnerEl.style.display = 'none', 500); // Wait for transition
+                }, 3000); // 3-second delay
+            }
+        }, 1);
+    };
+    spinner();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

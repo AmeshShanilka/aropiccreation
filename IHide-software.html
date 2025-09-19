@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AroPic - IHide Software</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link href="img/favicon.png" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Products Section v2 */
+        .product-item-v2 {
+            position: relative;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+            transition: .5s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .product-item-v2:hover {
+            transform: translateY(-0.2px);
+            box-shadow: 0 10px 25px rgba(165, 0, 63, 0.199);
+        }
+
+        .product-item-v2 img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #f1f1f1;
+            transition: .3s;
+        }
+
+        .product-item-v2:hover img {
+            border-color: var(--primary);
+        }
+
+        .product-item-v2 .btn {
+            transition: .5s;
+            z-index: 2;
+            position: relative;
+        }
+
+        .product-item-v2 .product-price {
+            margin: 10px 0;
+        }
+
+        .product-item-v2 h4 {
+            color: var(--primary);
+            transition: .3s;
+        }
+
+        .product-item-v2:hover h4 {
+            color: #e90d73 !important;
+        }
+
+        .product-item-v2 .btn-outline-primary {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .product-item-v2 .btn-outline-primary:hover {
+            background-color: var(--primary);
+            color: #ffffff !important;
+        }
+
+        /* Remove the overlay completely */
+        .product-overlay {
+            display: none !important;
+        }
+
+        /* Pricing Card Styles */
+        .pricing-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-card .price small {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .pricing-card h4 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pricing-card ul li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            color: #666;
+        }
+
+        .pricing-card ul li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <video autoplay loop muted playsinline>
+                <source src="img/loader.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <h1 class="m-0"></i>AROPIC</h1>
+                    </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <a href="project.html" class="nav-item nav-link">Projects</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Products</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="software_and_apps.html" class="dropdown-item">Software and Apps</a>
+                                <a href="online_tools.html" class="dropdown-item">Online Tools</a>
+                                <a href="prebuilt-websites.html" class="dropdown-item">Prebuilt Websites</a>
+                                
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    
+                    <a href="https://wa.me/message/77ER3ZFRTISXF1" class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3">Let's Chat</a>
+                </div>
+            </nav>
+
+            <div class="container-xxl py-5 bg-primary hero-header mb-5">
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5 py-5">
+                        <div class="col-12 text-center">
+                            <h1 class="text-white animated zoomIn">IHide</h1>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a class="text-white" href="software_and_apps.html">Software and Apps</a></li>
+                                    <li class="breadcrumb-item text-white active" aria-current="page">IHide</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-xxl py-5">
+            <div class="container px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <img class="img-fluid rounded" src="img/software_images/IHide.jpg" alt="IHide Software">
+                    </div>
+                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                        <h2 class="mt-2 text-primary">IHide - Image Steganography Software</h2>
+                        <p class="mb-4">
+                            IHide is a powerful and easy-to-use software that allows you to secretly embed data—be it text, passwords, login info or other inside an image file. It uses advanced steganography techniques to hide your information, making it virtually undetectable to the naked eye. Perfect for protecting sensitive information or simply sharing private data discreetly.
+                        </p>
+                        <h4 class="mb-3 text-primary">Key Features:</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex align-items-center"><i class="fa fa-check-circle text-primary me-3"></i> <span>Data Hiding: Hide text, passwords, login data or any other type within an image.</span></li>
+                            <li class="list-group-item d-flex align-items-center"><i class="fa fa-check-circle text-primary me-3"></i> <span>Strong Encryption: Protect your hidden data with password-based encryption.</span></li>
+                            <li class="list-group-item d-flex align-items-center"><i class="fa fa-check-circle text-primary me-3"></i> <span>Universal Compatibility: Hidden data remains intact across different platforms and image viewers.</span></li>
+                            <li class="list-group-item d-flex align-items-center"><i class="fa fa-check-circle text-primary me-3"></i> <span>Simple Interface: A clean and intuitive design makes hiding and extracting data easy for everyone.</span></li>
+                            <li class="list-group-item d-flex align-items-center"><i class="fa fa-check-circle text-primary me-3"></i> <span>Stealth Mode: The final image looks and functions exactly like a normal picture, without any visible changes.</span></li>
+                        </ul>
+                        <div class="d-flex align-items-center mt-4">
+                            
+                            <a class="btn btn-outline-primary rounded-pill px-4" href="#contact">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-xxl py-5">
+            <div class="container px-lg-5">
+                <div class="row g-5">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="mt-2 text-primary wow fadeInUp" data-wow-delay="0.1s">Get IHide Today</h2>
+                        <p class="mb-5 wow fadeInUp" data-wow-delay="0.2s">
+                            Choose the best version for your needs.
+                        </p>
+                    </div>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="p-4 border rounded text-center">
+                            <h4 class="text-primary">Free Version</h4>
+                            <p class="mb-4">
+                                Start hiding information today without any cost. Perfect for personal needs.
+                            </p>
+                            <a href="softwares/IHide.exe" class="btn btn-outline-primary rounded-pill px-4" download>Download Now</a>
+                            <hr class="my-4">
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-2"><i class="fa fa-check-circle text-primary me-2"></i> Hide up to 5MB of data</li>
+                                <li class="mb-2"><i class="fa fa-check-circle text-primary me-2"></i> High level encryption</li>
+                                <li class="mb-2"><i class="fa fa-times-circle text-danger me-2"></i> No utput file watermark</li>
+                                <li class="mb-2"><i class="fa fa-times-circle text-danger me-2"></i> No password protection</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="p-4 border rounded text-center bg-light">
+                            <h4 class="text-primary">Full Version</h4>
+                            <h1 class="price my-3">$1.55<small>/one-time</small></h1>
+                            <p class="mb-4">
+                                Unlock all features with a single, one-time purchase.
+                            </p>
+                            <a href="https://wa.me/message/77ER3ZFRTISXF1" class="btn btn-primary rounded-pill px-4">Buy Now</a>
+                            <hr class="my-4">
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-2"><i class="fa fa-check-circle text-primary me-2"></i> Unlimited data hiding</li>
+                                <li class="mb-2"><i class="fa fa-check-circle text-primary me-2"></i> Advanced encryption</li>
+                                <li class="mb-2"><i class="fa fa-check-circle text-primary me-2"></i> Password protection</li>
+                                <li class="mb-2"><i class="fa fa-check-circle text-primary me-2"></i> No watermark</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>Avissawella, Colombo, SL</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+947 576 69690</p>
+                        <p><i class="fa fa-envelope me-3"></i>aropic@contact.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href="https://twitter.com/search?q=%23TheamEXO&src=hashtag_click&f=user"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                              </svg></a>
+                            <a class="btn btn-outline-light btn-social" href="https://m.facebook.com/people/AroPic-Creation/100094487085752/"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://youtube.com/@amesh8325?si=e_FdgPpnTvmIwEPE"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/amesh_shanilka/reels/"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Popular Link</h5>
+                        <a class="btn btn-link" href="about.html">About Us</a>
+                        <a class="btn btn-link" href="contact.html">Contact Us</a>
+                        <a class="btn btn-link" href="privacy-policy.html">Privacy Policy</a>
+                        <a class="btn btn-link" href="terms-&-condition.html">Terms & Condition</a>
+                        
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Project Gallery</h5>
+                        <div class="row g-2">
+                            <div class="col-4">
+                                <a href="project.html"><img class="img-fluid" src="img/portfolio/post/social media 10.jpg" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="project.html"><img class="img-fluid" src="img/portfolio/post/social media 14.jpg" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="project.html"><img class="img-fluid" src="img/portfolio/post/social media 6.jpg" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="project.html"><img class="img-fluid" src="img/portfolio/post/social media 2.jpg" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="project.html"><img class="img-fluid" src="img/portfolio/post/social media 4.jpg" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="project.html"><img class="img-fluid" src="img/portfolio/post/social media 5.jpg" alt="Image"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Our Products</h5>
+                        <p> </p>
+                        <div class="row g-2">
+                            <div class="col-4">
+                                <a href="software_and_apps.html"><img class="img-fluid" src="img/software_images/imago_icon.png" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="software_and_apps.html"><img class="img-fluid" src="img/software_images/guardoo.ico" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="software_and_apps.html"><img class="img-fluid" src="img/software_images/ihide.ico" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="software_and_apps.html"><img class="img-fluid" src="img/software_images/pidgo.ico" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="software_and_apps.html"><img class="img-fluid" src="img/software_images/pdgear.ico" alt="Image"></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="online_tools.html"><img class="img-fluid" src="img/online-tools/mp3-cover-icon.jpg" alt="Image"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="index.html">AroPic Creation</a>, All Right Reserved. 
+							
+							Designed and Develop By <a class="border-bottom" href="https://avex.com/">AveX</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="index.html">Home</a>
+                                <a href="service.html">Service</a>
+                                <a href="contact.html">Help</a>
+                                <a href="faq.html">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script>
+        // spinner function to handle the preloader with a timeout
+    var spinner = function () {
+        setTimeout(function () {
+            const spinnerEl = document.getElementById('spinner');
+            if (spinnerEl) {
+                // Keep the spinner for at least 3 seconds
+                setTimeout(() => {
+                    spinnerEl.classList.remove('show');
+                    // Optional: Hide the element completely after the animation
+                    setTimeout(() => spinnerEl.style.display = 'none', 500); // Wait for transition
+                }, 3000); // 3-second delay
+            }
+        }, 1);
+    };
+    spinner();
+    </script>
+</body>
+
+</html>
