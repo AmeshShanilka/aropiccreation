@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AroPic - App Store | Mobile Apps & Games</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="AroPic App Store, mobile apps, weather app, 3D game, CubeX, Arowin" name="keywords">
+    <meta content="Discover and download amazing mobile apps from AroPic App Store. Arowin weather app and CubeX 3D block stack game available now." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- App Store Custom Styles -->
+    <style>
+        /* App Store specific styling - modern, playful but aligned with brand */
+        .app-item {
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+        .app-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 40px -15px rgba(165, 0, 63, 0.25);
+        }
+        .app-badge {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 100px;
+            padding: 6px 14px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: #a5003f;
+            display: inline-block;
+        }
+        .app-icon-wrapper {
+            background: linear-gradient(145deg, #fef9fc, #fff0f5);
+            border-radius: 32px;
+            padding: 12px;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        .app-icon-lg {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        .app-item:hover .app-icon-lg {
+            transform: scale(1.02);
+        }
+        .subpage-btn {
+            background: transparent;
+            border: 1.5px solid var(--primary);
+            color: var(--primary);
+            border-radius: 40px;
+            padding: 8px 20px;
+            font-weight: 600;
+            transition: 0.25s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .subpage-btn i {
+            font-size: 0.9rem;
+        }
+        .subpage-btn:hover {
+            background: var(--primary);
+            color: white !important;
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        .app-feature-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1rem;
+        }
+        .app-feature-list li {
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .app-feature-list li i {
+            color: #28a745;
+            font-size: 0.8rem;
+        }
+        .price-tag {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #212529;
+        }
+        .price-small {
+            font-size: 0.9rem;
+            font-weight: normal;
+            color: #6c757d;
+        }
+        .hero-app-gradient {
+            background: linear-gradient(135deg, #a5003f 0%, #df3f7c 100%);
+        }
+        .btn-outline-appstore {
+            border: 2px solid white;
+            color: white;
+            border-radius: 60px;
+            padding: 10px 30px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .btn-outline-appstore:hover {
+            background: white;
+            color: #a5003f;
+            border-color: white;
+        }
+        .badge-feature {
+            background: rgba(255,255,240,0.2);
+            backdrop-filter: blur(2px);
+            border-radius: 100px;
+            padding: 0.3rem 1rem;
+            font-size: 0.75rem;
+        }
+        .app-subpage-card {
+            background: white;
+            border-radius: 2rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-top: 2rem;
+        }
+        .btn-primary-app {
+            background: var(--primary);
+            color: white;
+            border-radius: 60px;
+            padding: 12px 32px;
+            font-weight: 600;
+            border: none;
+            transition: all 0.2s;
+        }
+        .btn-primary-app:hover {
+            background: #c21a62;
+            transform: scale(1.02);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <video autoplay loop muted playsinline>
+                <source src="img/loader.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <h1 class="m-0">AROPIC</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <a href="project.html" class="nav-item nav-link">Projects</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Products</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="software_and_apps.html" class="dropdown-item">Software Store</a>
+                                <a href="app_store.html" class="dropdown-item active">App Store</a>
+                                <a href="online_tools.html" class="dropdown-item">Online Tools</a>
+                                <a href="prebuilt-websites.html" class="dropdown-item">Prebuilt Websites</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="https://wa.me/message/77ER3ZFRTISXF1" class="btn btn-light text-dark rounded-pill py-2 px-4 ms-3" style="border: 1px solid #ccc;">Let's Chat</a>
+                </div>
+            </nav>
+
+            <!-- App Store Hero with fresh vibe -->
+            <div class="container-xxl py-5 hero-app-gradient mb-5" style="border-radius: 0 0 40px 40px;">
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5 py-5 align-items-center">
+                        <div class="col-lg-7 text-center text-lg-start wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="badge-feature d-inline-block mb-3 text-white border border-white">📱 Official App Store</div>
+                            <h1 class="text-white display-5 fw-bold mb-4">Discover <span class="border-bottom border-white pb-1">Amazing Apps</span> <br>by AroPic</h1>
+                            <p class="text-white-50 mb-4">Powerful mobile experiences crafted for everyday life. From smart weather forecasts to addictive 3D games — we bring innovation to your fingertips.</p>
+                            <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                                <a href="#apps-showcase" class="btn btn-outline-appstore">Explore Apps <i class="bi bi-arrow-down ms-2"></i></a>
+                                <a href="contact.html" class="btn btn-light text-dark rounded-pill px-4 py-2">Request Custom App</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 text-center wow zoomIn" data-wow-delay="0.4s">
+                            <div class="position-relative">
+                                <img src="img/apps-mockup.png" alt="App mockup" class="img-fluid" style="max-width: 280px;" onerror="this.src='https://placehold.co/400x500/e9ecef/a5003f?text=Apps+Store'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Main App Store Content: Two Apps with Subpage Buttons -->
+        <div class="container-xxl py-5" id="apps-showcase">
+            <div class="container px-lg-5">
+                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 700px;">
+                    <h5 class="fw-bold text-primary text-uppercase">Mobile Excellence</h5>
+                    <h1 class="mb-0">Featured Apps</h1>
+                    <p class="text-muted mt-3">Tap on "App Subpage" to learn more about each application, or download directly.</p>
+                </div>
+                
+                <div class="row g-5">
+                    <!-- App 1: Arowin - Weather App -->
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="app-item p-4">
+                            <div class="d-flex align-items-start flex-wrap gap-3 mb-3">
+                                <div class="app-icon-wrapper">
+                                    <img src="img/app_icons/arowin_icon.png" alt="Arowin Icon" class="app-icon-lg" onerror="this.src='https://placehold.co/100x100/a5003f/white?text=AW'">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                        <h2 class="mb-1 text-primary">Arowin</h2>
+                                        <span class="app-badge"><i class="fas fa-cloud-sun me-1"></i> Weather & Lifestyle</span>
+                                    </div>
+                                    <p class="text-muted mb-2">Real-time precision weather · Smart forecasts · Radar maps</p>
+                                    <div class="d-flex gap-2">
+                                        <span class="badge bg-light text-dark rounded-pill">iOS</span>
+                                        <span class="badge bg-light text-dark rounded-pill">Android</span>
+                                        <span class="badge bg-light text-dark rounded-pill">Wear OS</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-dark mt-2">Arowin provides hyperlocal weather updates, severe weather alerts, and an elegant 7-day forecast. Perfect for travelers, outdoor enthusiasts, and daily commuters.</p>
+                            <ul class="app-feature-list">
+                                <li><i class="fas fa-check-circle"></i> Live radar & satellite imagery</li>
+                                <li><i class="fas fa-check-circle"></i> Air quality & UV index monitoring</li>
+                                <li><i class="fas fa-check-circle"></i> Hourly precipitation alerts</li>
+                                <li><i class="fas fa-check-circle"></i> Customizable widgets & themes</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center mt-3 flex-wrap gap-3">
+                                <div>
+                                    <span class="price-tag">FREE</span> <span class="price-small">/ with optional premium</span>
+                                </div>
+                                <div class="d-flex gap-3">
+                                    <!-- Subpage button for Arowin (modal / link to subpage) -->
+                                    <a href="#" class="subpage-btn" data-bs-toggle="modal" data-bs-target="#arowinModal"><i class="bi bi-info-circle"></i> App Subpage</a>
+                                    <a href="#" class="btn btn-primary-app rounded-pill px-4 py-2" onclick="alert('Demo: Arowin download would start. Available on stores soon.'); return false;"><i class="fab fa-google-play me-1"></i> Download</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- App 2: CubeX - 3D block cube stack game -->
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="app-item p-4">
+                            <div class="d-flex align-items-start flex-wrap gap-3 mb-3">
+                                <div class="app-icon-wrapper">
+                                    <img src="img/app_icons/cubex_icon.png" alt="CubeX Icon" class="app-icon-lg" onerror="this.src='https://placehold.co/100x100/4a0e4e/white?text=3DX'">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                        <h2 class="mb-1 text-primary">CubeX</h2>
+                                        <span class="app-badge"><i class="fas fa-cube me-1"></i> 3D Arcade Game</span>
+                                    </div>
+                                    <p class="text-muted mb-2">Stack, balance, and dominate the cube tower!</p>
+                                    <div class="d-flex gap-2">
+                                        <span class="badge bg-light text-dark rounded-pill">iOS</span>
+                                        <span class="badge bg-light text-dark rounded-pill">Android</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-dark mt-2">CubeX delivers an addictive 3D block-stacking experience. Tap to drop cubes, build the tallest tower, and avoid missing the platform. Minimalist design with vibrant neon aesthetics.</p>
+                            <ul class="app-feature-list">
+                                <li><i class="fas fa-check-circle"></i> 3D physics-based stacking mechanics</li>
+                                <li><i class="fas fa-check-circle"></i> Endless mode & challenge levels</li>
+                                <li><i class="fas fa-check-circle"></i> Global leaderboards & achievements</li>
+                                <li><i class="fas fa-check-circle"></i> Smooth 60fps & haptic feedback</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center mt-3 flex-wrap gap-3">
+                                <div>
+                                    <span class="price-tag">FREE</span> <span class="price-small">with in-app purchases</span>
+                                </div>
+                                <div class="d-flex gap-3">
+                                    <!-- Subpage button for CubeX -->
+                                    <a href="#" class="subpage-btn" data-bs-toggle="modal" data-bs-target="#cubexModal"><i class="bi bi-info-circle"></i> App Subpage</a>
+                                    <a href="#" class="btn btn-primary-app rounded-pill px-4 py-2" onclick="alert('Demo: CubeX game download link would open. Coming soon!'); return false;"><i class="fas fa-gamepad me-1"></i> Play Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional CTA for developers -->
+                <div class="row mt-5 pt-4">
+                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="bg-light rounded-4 p-5 shadow-sm">
+                            <h3 class="text-primary">📲 More apps coming soon!</h3>
+                            <p class="text-dark">Want to collaborate or suggest a feature? AroPic team is always creating unique mobile solutions.</p>
+                            <a href="contact.html" class="subpage-btn border-2"><i class="bi bi-chat-dots"></i> Contact us for custom app development</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arowin Subpage Modal (Detailed Subpage Buttons content) -->
+        <div class="modal fade" id="arowinModal" tabindex="-1" aria-labelledby="arowinModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content rounded-4 border-0 shadow">
+                    <div class="modal-header bg-primary text-white border-0 rounded-top-4">
+                        <h5 class="modal-title fw-bold" id="arowinModalLabel"><i class="fas fa-cloud-sun me-2"></i> Arowin - Smart Weather Assistant</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img src="img/app_icons/arowin_icon.png" alt="Arowin details" class="img-fluid rounded-3 shadow-sm" style="max-width: 140px;" onerror="this.src='https://placehold.co/150x150/a5003f/white?text=Arowin'">
+                                <div class="mt-3">
+                                    <span class="badge bg-success text-white px-3 py-2">⭐ 4.9 Rating</span>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h4>Your personal meteorologist</h4>
+                                <p>Arowin combines AI-driven weather prediction with interactive maps. Get minute-by-minute rain forecasts, wind speed, humidity, and feels-like temperature. The app also features sunrise/sunset tracker, pollen count for allergy sufferers, and weather-dependent activity suggestions.</p>
+                                <hr>
+                                <h6><i class="fas fa-download text-primary"></i> Key Features (Subpage Details)</h6>
+                                <ul>
+                                    <li>🌍 Global coverage with local precision</li>
+                                    <li>📊 15-day weather trend graphs</li>
+                                    <li>🔔 Custom alerts for storms, frost, heatwaves</li>
+                                    <li>🌙 Dark mode & animated weather backgrounds</li>
+                                    <li>📱 Wearable support — check weather on smartwatch</li>
+                                </ul>
+                                <div class="alert alert-light border mt-3">
+                                    <strong>📱 Compatibility:</strong> iOS 14+, Android 8+, Wear OS.<br>
+                                    <strong>💸 Pricing:</strong> Free basic version; Pro subscription ($2.99/mo) removes ads & unlocks hourly radar.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-light border-0 rounded-bottom-4">
+                        <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Close</button>
+                        <a href="#" class="btn btn-primary-app rounded-pill" onclick="alert('Arowin would redirect to official download page'); return false;">Download on App Store</a>
+                        <a href="#" class="btn btn-outline-primary rounded-pill" onclick="alert('Get it on Google Play demo'); return false;">Get it on Google Play</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CubeX Subpage Modal -->
+        <div class="modal fade" id="cubexModal" tabindex="-1" aria-labelledby="cubexModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content rounded-4 border-0 shadow">
+                    <div class="modal-header bg-dark text-white border-0 rounded-top-4" style="background: linear-gradient(145deg, #2a1a2f, #1a0f1f);">
+                        <h5 class="modal-title fw-bold" id="cubexModalLabel"><i class="fas fa-cube me-2"></i> CubeX - 3D Block Stack Challenge</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img src="img/app_icons/cubex_icon.png" alt="CubeX game cover" class="img-fluid rounded-3 shadow-sm" style="max-width: 140px;" onerror="this.src='https://placehold.co/150x150/4a0e4e/white?text=CubeX'">
+                                <div class="mt-3">
+                                    <span class="badge bg-warning text-dark px-3 py-2">🎮 Arcade hit</span>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h4>Stack, balance, and don't fall!</h4>
+                                <p>CubeX challenges your timing and precision. Simply tap when the moving block aligns with the previous one — each successful stack increases your multiplier. The 3D environment rotates smoothly and adds immersive depth. Compete with friends and unlock vibrant cube skins.</p>
+                                <hr>
+                                <h6><i class="fas fa-dice-d6 text-primary"></i> Gameplay Highlights (Subpage)</h6>
+                                <ul>
+                                    <li>🎲 Dynamic difficulty - faster block movement as tower grows</li>
+                                    <li>🏆 Leaderboards & daily challenges</li>
+                                    <li>🌈 Unlockable neon trails, cube patterns</li>
+                                    <li>📱 One-touch controls perfectly for mobile</li>
+                                    <li>🕹️ Offline mode - play anywhere</li>
+                                </ul>
+                                <div class="alert alert-secondary border mt-3">
+                                    <strong>🎯 Available now on:</strong> iOS & Android. <strong>Size:</strong> ~120MB. Free to play, optional cosmetic purchases. No intrusive ads after first few rounds.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-light border-0 rounded-bottom-4">
+                        <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Close</button>
+                        <a href="#" class="btn btn-primary-app rounded-pill" style="background:#4a0e4e;" onclick="alert('CubeX would redirect to App Store / Google Play'); return false;"><i class="fab fa-apple me-1"></i> App Store</a>
+                        <a href="#" class="btn btn-outline-dark rounded-pill" onclick="alert('CubeX on Google Play demo'); return false;"><i class="fab fa-android me-1"></i> Google Play</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Start (same as original for consistency) -->
+        <div class="container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>Avissawella, Colombo, SL</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+947 576 69690</p>
+                        <p><i class="fa fa-envelope me-3"></i>aropic@contact.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href="https://twitter.com/search?q=%23TheamEXO"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/></svg></a>
+                            <a class="btn btn-outline-light btn-social" href="https://m.facebook.com/people/AroPic-Creation/100094487085752/"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://youtube.com/@amesh8325"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/amesh_shanilka/reels/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Popular Link</h5>
+                        <a class="btn btn-link" href="about.html">About Us</a>
+                        <a class="btn btn-link" href="contact.html">Contact Us</a>
+                        <a class="btn btn-link" href="privacy-policy.html">Privacy Policy</a>
+                        <a class="btn btn-link" href="terms-&-condition.html">Terms & Condition</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Project Gallery</h5>
+                        <div class="row g-2">
+                            <div class="col-4"><a href="project.html"><img class="img-fluid" src="img/portfolio/post/social media 10.jpg" alt="Image"></a></div>
+                            <div class="col-4"><a href="project.html"><img class="img-fluid" src="img/portfolio/post/social media 14.jpg" alt="Image"></a></div>
+                            <div class="col-4"><a href="project.html"><img class="img-fluid" src="img/portfolio/post/social media 6.jpg" alt="Image"></a></div>
+                            <div class="col-4"><a href="project.html"><img class="img-fluid" src="img/portfolio/post/social media 2.jpg" alt="Image"></a></div>
+                            <div class="col-4"><a href="project.html"><img class="img-fluid" src="img/portfolio/post/social media 4.jpg" alt="Image"></a></div>
+                            <div class="col-4"><a href="project.html"><img class="img-fluid" src="img/portfolio/post/social media 5.jpg" alt="Image"></a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Our Products</h5>
+                        <div class="row g-2">
+                            <div class="col-4"><a href="software_and_apps.html"><img class="img-fluid" src="img/software_images/imago_icon.png" alt="Image"></a></div>
+                            <div class="col-4"><a href="software_and_apps.html"><img class="img-fluid" src="img/software_images/guardoo.ico" alt="Image"></a></div>
+                            <div class="col-4"><a href="software_and_apps.html"><img class="img-fluid" src="img/software_images/ihide.ico" alt="Image"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">&copy; <a class="border-bottom" href="index.html">AroPic Creation</a>, All Right Reserved. Designed and Develop By <a class="border-bottom" href="https://avex.com/">AveX</a></div>
+                        <div class="col-md-6 text-center text-md-end"><div class="footer-menu"><a href="index.html">Home</a><a href="service.html">Service</a><a href="contact.html">Help</a><a href="faq.html">FQAs</a></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        var spinner = function () {
+            setTimeout(function () {
+                const spinnerEl = document.getElementById('spinner');
+                if (spinnerEl) {
+                    setTimeout(() => {
+                        spinnerEl.classList.remove('show');
+                        setTimeout(() => spinnerEl.style.display = 'none', 500);
+                    }, 3000);
+                }
+            }, 1);
+        };
+        spinner();
+    </script>
+</body>
+
+</html>
